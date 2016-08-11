@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="SimpleHelpDesk.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>Simple Help Desk</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .footer {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+        <div class="navbar navbar-default">
+            <div class="container-fluid">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                    <%--If adding more links put here for mobile
+                        <span class="icon-bar">
+                        <a href="Default.aspx"><b>Home</b></a>
+                    </span>--%>
+                </button>
+                <a class="navbar-brand" href="Default.aspx">Simple Help Desk</a>
+                <div class="navbar-collapse collapse">
+                    <%--Only a single page. More links here for desktop 
+                        <ul class="nav navbar-nav">
+                        <li class="active"><a href="Default.aspx">Home</a></li>
+                    </ul>--%>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        <div class="clear">
+        </div>
+        <div class="footer">
+        </div>
+    </form>
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+</body>
+</html>
